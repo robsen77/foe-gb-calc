@@ -1,0 +1,51 @@
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Rang</th>
+        <th scope="col">Belohnung</th>
+        <th scope="col">Kosten</th>
+        <th scope="col">Absicherung</th>
+        <th scope="col">Sniping</th>
+        <th scope="col">Summe</th>
+        <th scope="col">Rest</th>
+        <th scope="col">offen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cost of costs.rankData" [ngClass]="cost.highRisk ? 'bg-danger text-white' : '' ">
+        <th scope="row">{{ cost.rank }}</th>
+        <td>{{ cost.reward > 0 ? cost.reward : "-"}}</td>
+        <td>{{ cost.cost > 0 ? cost.cost : "-" }}</td>
+        <td>{{ cost.hedge > 0 ? cost.hedge : "-" }}</td>
+        <td>{{ cost.snipingCost > 0 ? cost.snipingCost : "-" }}</td>
+        <td>{{ cost.alreadyPaid }}</td>
+        <td>{{ cost.rest }}</td>
+        <td>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" [(ngModel)]="openSlot[cost.rank - 1]" id="slot-{{ cost.rank - 1 }}" (change)="changeSummary()">
+            <label class="custom-control-label" for="slot-{{ cost.rank - 1 }}"></label>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="5"></th>
+        <td>{{ costs.buildingCost }}</td>
+        <td>-</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<div class="row justify-content-between">
+  <div class="col-4">
+    <label><input [(ngModel)]="prefix" placeholder="Prefix" type="text" (change)="changeSummary()" /></label><br />
+    <label><input [(ngModel)]="suffix" placeholder="Suffix" type="text" (change)="changeSummary()" /></label>
+  </div>
+  <div class="col-8 text-right">
+    <button type="button" class="btn btn-primary" *ngIf="summary" (click)="copy2Clipboard()">{{ summary }}</button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\node_modules",
+    "\\node_modules\\rxjs",
+    "\\node_modules\\rxjs\\internal",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\cost-table",
+    "\\src\\app\\level-selector",
+    "\\src\\assets",
+    "\\src\\assets\\data"
+  ],
+  "SelectedNode": "\\src\\app\\cost-table\\cost-table.component.ts",
+  "PreviewInSolutionExplorer": false
+}
