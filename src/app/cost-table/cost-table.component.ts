@@ -8,7 +8,7 @@ import { CostsService } from '../costs.service';
   styleUrls: ['./cost-table.component.css']
 })
 export class CostTableComponent implements OnInit {
-  public costs = {};
+  public costs;;
   public prefix: string = "Arche";
   public suffix: string = "";
   public summary: string = "";
