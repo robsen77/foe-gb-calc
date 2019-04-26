@@ -20,6 +20,7 @@ export class CostsService {
   calculateCosts() {
     let rankData = []
     let buildingCost: number;
+    let ownCost: number;
 
     this._getBuildingData().subscribe(buildingData => {
       let alreadyPaid: number = 0;
@@ -27,7 +28,7 @@ export class CostsService {
       let rankHedgingTotal: number = 0;
       let highRisk: boolean = false;
       let baseReward = buildingData.reward;
-      buildingCost = buildingData.cost;
+      buildingCost = ownCost = buildingData.cost;
 
       for (let rank = 1; rank <= 5; rank++) {
         let rankReward = this._calculateReward4Rank(baseReward, rank);
@@ -38,6 +39,7 @@ export class CostsService {
         highRisk = buildingCost - alreadyPaid - rankCost * 2 < -1;
         snipingCost = highRisk ? Math.round((buildingCost - alreadyPaid) / 2) : 0;
         alreadyPaid += rankCost + rankHedging;
+        ownCost -= rankCost;
 
         rankData.push({
           rank: rank,
@@ -54,6 +56,7 @@ export class CostsService {
 
       let result = {
         'buildingCost': buildingCost,
+        'ownCost': ownCost,
         'rankData': rankData
       };
 
