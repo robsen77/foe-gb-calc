@@ -10,6 +10,7 @@ import { CostsService } from '../costs.service';
 export class LevelSelectorComponent implements OnInit {
 
   public level;
+  public gb  = 'arc';
 
   constructor(private _costsService: CostsService) {
     this.level = this._costsService.getLevel()

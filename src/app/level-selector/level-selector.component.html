@@ -1,5 +1,13 @@
-<div class="row">
-  <div class="col">
-    <label>Arche Level: <input [(ngModel)]="level" placeholder="1" type="number" (change)="levelChanged()" /></label>
+<div class="form-row">
+  <div class="form-group col-md-2">
+    <label for="gbselect">Bitte LG auswählen:</label>
+    <select class="custom-select custom-select-sm " [(ngModel)]="gb" id="gbselect">
+      <option value="arc">Arche</option>
+    </select>
+  </div>
+  <div class="form-group col-md-2">
+    <label>Level</label>
+    <input [(ngModel)]="level" placeholder="1" type="number" (change)="levelChanged()" />
   </div>
 </div>
+<br />

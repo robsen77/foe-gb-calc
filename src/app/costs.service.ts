@@ -10,7 +10,7 @@ import { GlobalBuildingService } from './global-building.service';
 export class CostsService {
   private _multiplicator = 1.9;
   private _building = 'arc';
-  private _level: number = 10;
+  private _level: number = 30;
   private costsSource = new BehaviorSubject({});
   public costs = this.costsSource.asObservable();
 
@@ -24,6 +24,7 @@ export class CostsService {
     this._getBuildingData().subscribe(buildingData => {
       let alreadyPaid: number = 0;
       let snipingCost: number = 0;
+      let rankHedgingTotal: number = 0;
       let highRisk: boolean = false;
       let baseReward = buildingData.reward;
       buildingCost = buildingData.cost;
@@ -33,6 +34,7 @@ export class CostsService {
         let rankCost = this._getCost4Rank(rankReward);
         let rankHedging = this._getHedging4Rank(buildingCost, alreadyPaid, rankCost);
 
+        rankHedgingTotal = alreadyPaid + rankHedging;
         highRisk = buildingCost - alreadyPaid - rankCost * 2 < -1;
         snipingCost = highRisk ? Math.round((buildingCost - alreadyPaid) / 2) : 0;
         alreadyPaid += rankCost + rankHedging;
@@ -42,6 +44,7 @@ export class CostsService {
           reward: rankReward,
           cost: rankCost,
           hedge: rankHedging,
+          hedgeTotal: rankHedgingTotal,
           alreadyPaid: alreadyPaid,
           rest: buildingCost - alreadyPaid,
           highRisk: highRisk,
