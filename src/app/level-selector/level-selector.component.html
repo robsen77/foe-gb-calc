@@ -1,6 +1,6 @@
 <div class="form-row">
   <div class="form-group col-md-2">
-    <label for="gbselect">Bitte LG auswählen:</label>
+    <label for="gbselect">LG auswählen:</label>
     <select class="custom-select custom-select-sm " [(ngModel)]="gb" id="gbselect" (change)="globalBuildingChanged()" >
       <option *ngFor="let globalBuilding of globalBuildings" [value]="globalBuilding.key">{{ globalBuilding.name }}</option>
     </select>
