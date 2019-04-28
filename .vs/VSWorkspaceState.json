@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\docs",
+    "\\docs\\assets",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\cost-table",
+    "\\src\\app\\level-selector",
+    "\\src\\app\\shared",
+    "\\src\\app\\sniping",
+    "\\src\\app\\summary"
+  ],
+  "SelectedNode": "\\src\\app\\costs.service.ts",
+  "PreviewInSolutionExplorer": false
+}
