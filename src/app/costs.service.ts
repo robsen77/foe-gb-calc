@@ -74,6 +74,15 @@ export class CostsService {
     this.calculateCosts();
   }
 
+  public setBuilding(building): void {
+    this._building = building;
+    this.calculateCosts();
+  }
+
+  public getBuilding(): string {
+    return this._building;
+  }
+
   private _getBuildingData(): Observable<any> {
     const rewardObservable = new Observable(observer => {
       this.globalBuildingService.getBuildingData(this._building, this._level).subscribe(buildingData => {

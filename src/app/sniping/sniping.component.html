@@ -1,16 +1,14 @@
 <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="sniperActive" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" checked>
+  <input type="checkbox" class="custom-control-input" id="sniperActive" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   <label class="custom-control-label" for="sniperActive">Sniper vorhanden?</label>
 </div>
-<div class="collapse show" id="collapseExample">
+<div class="collapse" id="collapseExample">
   <div class="card card-body">
     <form class="form-inline" (ngSubmit)="onSubmit()" [formGroup]="sniperForm">
       <div class="form-group mx-sm-3 mb-2">
         <input type="text" class="form-control" formControlName="sniperInput" placeholder="Einlage in FP"><br />
       </div>
       <button type="submit" class="btn btn-primary mb-2" [disabled]="!sniperForm.valid">Hinzufügen</button>
-      
-
     </form>
     <div class="row">
       <div class="col">
@@ -18,7 +16,6 @@
           <button type="button" class="btn btn-danger" (click)="removeSniper(sniper)">{{ sniper | number }} x</button>&nbsp;
         </span>
       </div>
-
     </div>
   </div>
 </div>

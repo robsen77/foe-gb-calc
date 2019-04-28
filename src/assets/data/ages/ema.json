@@ -1,0 +1,530 @@
+[
+  {
+    "cost": 50,
+    "reward": 5
+  },
+  {
+    "cost": 60,
+    "reward": 10
+  },
+  {
+    "cost": 120,
+    "reward": 15
+  },
+  {
+    "cost": 190,
+    "reward": 20
+  },
+  {
+    "cost": 240,
+    "reward": 25
+  },
+  {
+    "cost": 320,
+    "reward": 35
+  },
+  {
+    "cost": 380,
+    "reward": 40
+  },
+  {
+    "cost": 460,
+    "reward": 50
+  },
+  {
+    "cost": 530,
+    "reward": 55
+  },
+  {
+    "cost": 600,
+    "reward": 65
+  },
+  {
+    "cost": 615,
+    "reward": 70
+  },
+  {
+    "cost": 631,
+    "reward": 80
+  },
+  {
+    "cost": 647,
+    "reward": 85
+  },
+  {
+    "cost": 663,
+    "reward": 95
+  },
+  {
+    "cost": 679,
+    "reward": 100
+  },
+  {
+    "cost": 696,
+    "reward": 110
+  },
+  {
+    "cost": 714,
+    "reward": 120
+  },
+  {
+    "cost": 732,
+    "reward": 130
+  },
+  {
+    "cost": 750,
+    "reward": 135
+  },
+  {
+    "cost": 769,
+    "reward": 145
+  },
+  {
+    "cost": 788,
+    "reward": 155
+  },
+  {
+    "cost": 807,
+    "reward": 165
+  },
+  {
+    "cost": 828,
+    "reward": 175
+  },
+  {
+    "cost": 848,
+    "reward": 180
+  },
+  {
+    "cost": 869,
+    "reward": 190
+  },
+  {
+    "cost": 891,
+    "reward": 200
+  },
+  {
+    "cost": 913,
+    "reward": 210
+  },
+  {
+    "cost": 936,
+    "reward": 220
+  },
+  {
+    "cost": 960,
+    "reward": 230
+  },
+  {
+    "cost": 984,
+    "reward": 240
+  },
+  {
+    "cost": 1008,
+    "reward": 250
+  },
+  {
+    "cost": 1033,
+    "reward": 255
+  },
+  {
+    "cost": 1059,
+    "reward": 265
+  },
+  {
+    "cost": 1086,
+    "reward": 275
+  },
+  {
+    "cost": 1113,
+    "reward": 285
+  },
+  {
+    "cost": 1141,
+    "reward": 295
+  },
+  {
+    "cost": 1169,
+    "reward": 305
+  },
+  {
+    "cost": 1198,
+    "reward": 315
+  },
+  {
+    "cost": 1228,
+    "reward": 325
+  },
+  {
+    "cost": 1259,
+    "reward": 335
+  },
+  {
+    "cost": 1291,
+    "reward": 345
+  },
+  {
+    "cost": 1323,
+    "reward": 360
+  },
+  {
+    "cost": 1356,
+    "reward": 370
+  },
+  {
+    "cost": 1390,
+    "reward": 380
+  },
+  {
+    "cost": 1424,
+    "reward": 390
+  },
+  {
+    "cost": 1460,
+    "reward": 400
+  },
+  {
+    "cost": 1497,
+    "reward": 410
+  },
+  {
+    "cost": 1534,
+    "reward": 420
+  },
+  {
+    "cost": 1572,
+    "reward": 430
+  },
+  {
+    "cost": 1612,
+    "reward": 440
+  },
+  {
+    "cost": 1652,
+    "reward": 450
+  },
+  {
+    "cost": 1693,
+    "reward": 465
+  },
+  {
+    "cost": 1735,
+    "reward": 475
+  },
+  {
+    "cost": 1779,
+    "reward": 485
+  },
+  {
+    "cost": 1823,
+    "reward": 495
+  },
+  {
+    "cost": 1869,
+    "reward": 505
+  },
+  {
+    "cost": 1916,
+    "reward": 515
+  },
+  {
+    "cost": 1963,
+    "reward": 525
+  },
+  {
+    "cost": 2012,
+    "reward": 540
+  },
+  {
+    "cost": 2063,
+    "reward": 550
+  },
+  {
+    "cost": 2114,
+    "reward": 560
+  },
+  {
+    "cost": 2167,
+    "reward": 570
+  },
+  {
+    "cost": 2221,
+    "reward": 585
+  },
+  {
+    "cost": 2277,
+    "reward": 595
+  },
+  {
+    "cost": 2334,
+    "reward": 605
+  },
+  {
+    "cost": 2392,
+    "reward": 615
+  },
+  {
+    "cost": 2452,
+    "reward": 625
+  },
+  {
+    "cost": 2513,
+    "reward": 640
+  },
+  {
+    "cost": 2576,
+    "reward": 650
+  },
+  {
+    "cost": 2640,
+    "reward": 660
+  },
+  {
+    "cost": 2706,
+    "reward": 675
+  },
+  {
+    "cost": 2774,
+    "reward": 685
+  },
+  {
+    "cost": 2843,
+    "reward": 695
+  },
+  {
+    "cost": 2914,
+    "reward": 705
+  },
+  {
+    "cost": 2987,
+    "reward": 720
+  },
+  {
+    "cost": 3062,
+    "reward": 730
+  },
+  {
+    "cost": 3138,
+    "reward": 740
+  },
+  {
+    "cost": 3217,
+    "reward": 755
+  },
+  {
+    "cost": 3297,
+    "reward": 765
+  },
+  {
+    "cost": 3380,
+    "reward": 775
+  },
+  {
+    "cost": 3464,
+    "reward": 790
+  },
+  {
+    "cost": 3551,
+    "reward": 800
+  },
+  {
+    "cost": 3640,
+    "reward": 810
+  },
+  {
+    "cost": 3731,
+    "reward": 825
+  },
+  {
+    "cost": 3824,
+    "reward": 835
+  },
+  {
+    "cost": 3919,
+    "reward": 850
+  },
+  {
+    "cost": 4017,
+    "reward": 860
+  },
+  {
+    "cost": 4118,
+    "reward": 875
+  },
+  {
+    "cost": 4221,
+    "reward": 885
+  },
+  {
+    "cost": 4326,
+    "reward": 895
+  },
+  {
+    "cost": 4434,
+    "reward": 910
+  },
+  {
+    "cost": 4545,
+    "reward": 920
+  },
+  {
+    "cost": 4659,
+    "reward": 930
+  },
+  {
+    "cost": 4775,
+    "reward": 945
+  },
+  {
+    "cost": 4895,
+    "reward": 955
+  },
+  {
+    "cost": 5017,
+    "reward": 970
+  },
+  {
+    "cost": 5142,
+    "reward": 980
+  },
+  {
+    "cost": 5271,
+    "reward": 995
+  },
+  {
+    "cost": 5403,
+    "reward": 1005
+  },
+  {
+    "cost": 5538,
+    "reward": 1015
+  },
+  {
+    "cost": 5676,
+    "reward": 1030
+  },
+  {
+    "cost": 5818,
+    "reward": 1040
+  },
+  {
+    "cost": 5964,
+    "reward": 1055
+  },
+  {
+    "cost": 6113,
+    "reward": 1065
+  },
+  {
+    "cost": 6265,
+    "reward": 1080
+  },
+  {
+    "cost": 6422,
+    "reward": 1090
+  },
+  {
+    "cost": 6583,
+    "reward": 1105
+  },
+  {
+    "cost": 6747,
+    "reward": 1115
+  },
+  {
+    "cost": 6916,
+    "reward": 1130
+  },
+  {
+    "cost": 7089,
+    "reward": 1140
+  },
+  {
+    "cost": 7266,
+    "reward": 1155
+  },
+  {
+    "cost": 7448,
+    "reward": 1165
+  },
+  {
+    "cost": 7634,
+    "reward": 1180
+  },
+  {
+    "cost": 7825,
+    "reward": 1190
+  },
+  {
+    "cost": 8020,
+    "reward": 1205
+  },
+  {
+    "cost": 8221,
+    "reward": 1215
+  },
+  {
+    "cost": 8426,
+    "reward": 1230
+  },
+  {
+    "cost": 8637,
+    "reward": 1240
+  },
+  {
+    "cost": 8853,
+    "reward": 1255
+  },
+  {
+    "cost": 9074,
+    "reward": 1265
+  },
+  {
+    "cost": 9301,
+    "reward": 1280
+  },
+  {
+    "cost": 9533,
+    "reward": 1290
+  },
+  {
+    "cost": 9772,
+    "reward": 1305
+  },
+  {
+    "cost": 10016,
+    "reward": 1320
+  },
+  {
+    "cost": 10266,
+    "reward": 1330
+  },
+  {
+    "cost": 10523,
+    "reward": 1345
+  },
+  {
+    "cost": 10786,
+    "reward": 1355
+  },
+  {
+    "cost": 11056,
+    "reward": 1370
+  },
+  {
+    "cost": 11332,
+    "reward": 1380
+  },
+  {
+    "cost": 11615,
+    "reward": 1395
+  },
+  {
+    "cost": 11906,
+    "reward": 1405
+  },
+  {
+    "cost": 12203,
+    "reward": 1420
+  }
+]

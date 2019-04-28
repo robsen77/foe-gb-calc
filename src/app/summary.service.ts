@@ -8,9 +8,9 @@ import { CostsService } from './costs.service';
 })
 export class SummaryService {
   private _costs;
-  private _slots;
   private _prefix: string = "";
   private _suffix: string = "";
+  private _building: string = "";
 
   constructor(private slotService: SlotService, private costsService: CostsService) {
     this.costsService.costs.subscribe(costs => {
@@ -35,13 +35,13 @@ export class SummaryService {
     if (openSlotsStr.length > 0) {
 
       if (this._prefix != "") {
-        summary += this._prefix + " ";
+        summary += this._getInterpolated(this._prefix) + " ";
       }
 
       summary += openSlotsStr.join(", ");
 
       if (this._suffix != "") {
-        summary += " " + this._suffix;
+        summary += " " + this._getInterpolated(this._suffix);
       }
     }
 
@@ -58,5 +58,13 @@ export class SummaryService {
 
   public setPrefix(prefix) {
     this._prefix = prefix;
+  }
+
+  public setBuilding(building) {
+    this._building = building;
+  }
+
+  private _getInterpolated(str: string): string {
+    return str.replace('{LG}', this._building);
   }
 }

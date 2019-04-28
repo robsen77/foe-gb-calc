@@ -17,8 +17,8 @@
       <div class="input-group-prepend">
         <span class="input-group-text">Prefix / Suffix</span>
       </div>
-      <input type="text" aria-label="First name" class="form-control" [(ngModel)]="prefix" placeholder="" (change)="changePrefix()" />
-      <input type="text" aria-label="Last name" class="form-control" [(ngModel)]="suffix" placeholder="" (change)="changeSuffix()" />
+      <input type="text" class="form-control" [(ngModel)]="prefix" placeholder="verwende {LG} für das ausgewählte LG" (change)="changePrefix()" />
+      <input type="text" class="form-control" [(ngModel)]="suffix" placeholder="verwende {LG} für das ausgewählte LG" (change)="changeSuffix()" />
     </div>
   </div>
 </div>

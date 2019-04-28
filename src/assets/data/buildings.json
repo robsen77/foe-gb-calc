@@ -1,0 +1,150 @@
+{
+  "obs": {
+    "name": "Observatorium",
+    "age": "none"
+  },
+  "ora": {
+    "name": "Orakel von Delphi",
+    "age": "none-special"
+  },
+  "relikt": {
+    "name": "Relikttempel",
+    "age": "none"
+  },
+  "babel": {
+    "name": "Tum zu Babel",
+    "age": "bronce"
+  },
+  "zeus": {
+    "name": "Zeusstatue",
+    "age": "bronce"
+  },
+  "lighthouse": {
+    "name": "Leuchtturm von Alexandria",
+    "age": "iron"
+  },
+  "colosseum": {
+    "name": "Kolosseum",
+    "age": "iron"
+  },
+  "hagia": {
+    "name": "Hagia Sophia",
+    "age": "ema"
+  },
+  "aachen": {
+    "name": "Aachener Dom",
+    "age": "ema"
+  },
+  "notre": {
+    "name": "Notre Dame",
+    "age": "hma"
+  },
+  "markus": {
+    "name": "Markusdom",
+    "age": "hma"
+  },
+  "basilius": {
+    "name": "Basilius-Kathedrale",
+    "age": "lma"
+  },
+  "cdm": {
+    "name": "Castel del Monte",
+    "age": "lma"
+  },
+  "dresden": {
+    "name": "Dresdner Frauenkirche",
+    "age": "colo"
+  },
+  "deal": {
+    "name": "Deal Castle",
+    "age": "colo"
+  },
+  "royal": {
+    "name": "Royal Albert Hall",
+    "age": "industry"
+  },
+  "capitol": {
+    "name": "Capitol",
+    "age": "industry"
+  },
+  "chateau": {
+    "name": "Chateau Frontenac",
+    "age": "centuryturn"
+  },
+  "alca": {
+    "name": "Alcatraz",
+    "age": "centuryturn"
+  },
+  "space": {
+    "name": "Space Needle",
+    "age": "modern"
+  },
+  "atomium": {
+    "name": "Atomium",
+    "age": "modern"
+  },
+  "cape": {
+    "name": "Cape Canaveral",
+    "age": "postmodern"
+  },
+  "habitat": {
+    "name": "Habitat",
+    "age": "postmodern"
+  },
+  "lotus": {
+    "name": "Lotustempel",
+    "age": "present"
+  },
+  "inno": {
+    "name": "Innovation Tower",
+    "age": "present"
+  },
+  "dyna": {
+    "name": "Dynamischer Turm",
+    "age": "tomorrow"
+  },
+  "voyager": {
+    "name": "Voyager V1",
+    "age": "tomorrow"
+  },
+  "rainforrest": {
+    "name": "Regenwald Projekt",
+    "age": "future"
+  },
+  "arc": {
+    "name": "Arche",
+    "age": "future"
+  },
+  "orangery": {
+    "name": "Arktische Orangerie",
+    "age": "artic"
+  },
+  "gaea": {
+    "name": "Gaea Statue",
+    "age": "artic"
+  },
+  "safe": {
+    "name": "Saatgut Tresor",
+    "age": "artic"
+  },
+  "atlantis": {
+    "name": "Atlantis Museum",
+    "age": "ocean"
+  },
+  "octopi": {
+    "name": "Kraken",
+    "age": "ocean"
+  },
+  "galaxy": {
+    "name": "Blaue Galaxie",
+    "age": "ocean"
+  },
+  "terracotta": {
+    "name": "Terrakotta Armee",
+    "age": "virtual"
+  },
+  "himeji": {
+    "name": "Burg Himeji",
+    "age": "virtual"
+  }
+}

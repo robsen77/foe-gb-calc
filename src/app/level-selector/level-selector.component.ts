@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CostsService } from '../costs.service';
+import { GlobalBuildingService } from '../global-building.service';
+import { SummaryService } from '../summary.service';
 
 @Component({
   selector: 'app-level-selector',
@@ -10,18 +12,38 @@ import { CostsService } from '../costs.service';
 export class LevelSelectorComponent implements OnInit {
 
   public level = 30;
-  public gb  = 'arc';
+  public globalBuildings;
+  public gb = 'arc';
 
-  constructor(private _costsService: CostsService) {
-    this._costsService.setLevel(this.level);
-  }
-
-  levelChanged() {
-    this._costsService.setLevel(this.level);
+  constructor(
+    private costsService: CostsService,
+    private globalBuildingService: GlobalBuildingService,
+    private summaryService: SummaryService) {
+    this.costsService.setLevel(this.level);
   }
 
   ngOnInit() {
-    this._costsService.calculateCosts();
+    this.costsService.calculateCosts();
+    this.globalBuildingService.getGlobalBuildings().subscribe(globalBuildings => {
+      this.globalBuildings = globalBuildings;
+      this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
+    });
   }
 
+  public levelChanged() {
+    this.costsService.setLevel(this.level);
+  }
+
+  public globalBuildingChanged() {
+    this.costsService.setBuilding(this.gb);
+    this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
+  }
+
+  private _getGlobalBuildingByKey(key) {
+    for (let obj of this.globalBuildings) {
+      if (obj.key === key) {
+        return obj;
+      }
+    }
+  }
 }
