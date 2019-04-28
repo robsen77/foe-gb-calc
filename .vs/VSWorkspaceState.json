@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\node_modules",
-    "\\node_modules\\rxjs",
-    "\\node_modules\\rxjs\\internal",
+    "\\docs",
+    "\\docs\\assets",
     "\\src",
     "\\src\\app",
     "\\src\\app\\cost-table",
     "\\src\\app\\level-selector",
-    "\\src\\assets",
-    "\\src\\assets\\data"
+    "\\src\\app\\shared",
+    "\\src\\app\\sniping",
+    "\\src\\app\\summary"
   ],
-  "SelectedNode": "\\src\\app\\cost-table\\cost-table.component.ts",
+  "SelectedNode": "\\src\\app\\costs.service.ts",
   "PreviewInSolutionExplorer": false
 }

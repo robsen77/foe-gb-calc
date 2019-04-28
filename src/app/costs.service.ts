@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
 
 import { GlobalBuildingService } from './global-building.service';
+import { SniperService } from './sniper.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +16,9 @@ export class CostsService {
   public costs = this.costsSource.asObservable();
 
 
-  constructor(private _globalBuildingService: GlobalBuildingService) { }
+  constructor(private globalBuildingService: GlobalBuildingService, private sniperService: SniperService) { }
 
-  calculateCosts() {
+  public calculateCosts() {
     let rankData = []
     let buildingCost: number;
     let ownCost: number;
@@ -64,18 +65,18 @@ export class CostsService {
     });
   }
 
-  getLevel(): number {
+  public getLevel(): number {
     return this._level;
   }
 
-  setLevel(level): void {
+  public setLevel(level): void {
     this._level = level;
     this.calculateCosts();
   }
 
   private _getBuildingData(): Observable<any> {
     const rewardObservable = new Observable(observer => {
-      this._globalBuildingService.getBuildingData(this._building, this._level).subscribe(buildingData => {
+      this.globalBuildingService.getBuildingData(this._building, this._level).subscribe(buildingData => {
         observer.next(buildingData);
         observer.complete();
       });
