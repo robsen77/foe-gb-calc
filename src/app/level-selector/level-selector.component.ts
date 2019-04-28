@@ -14,12 +14,16 @@ export class LevelSelectorComponent implements OnInit {
   public level = 30;
   public globalBuildings;
   public gb = 'arc';
+  public factors = [1.85, 1.9];
+  public factor = 1.9;
 
   constructor(
     private costsService: CostsService,
     private globalBuildingService: GlobalBuildingService,
     private summaryService: SummaryService) {
+    this.costsService.setBuilding(this.gb);
     this.costsService.setLevel(this.level);
+    this.costsService.setFactor(this.factor);
   }
 
   ngOnInit() {
@@ -32,6 +36,10 @@ export class LevelSelectorComponent implements OnInit {
 
   public levelChanged() {
     this.costsService.setLevel(this.level);
+  }
+
+  public factorChanged() {
+    this.costsService.setFactor(this.factor);
   }
 
   public globalBuildingChanged() {

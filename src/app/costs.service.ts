@@ -9,10 +9,11 @@ import { SniperService } from './sniper.service';
   providedIn: 'root'
 })
 export class CostsService {
-  private _multiplicator = 1.9;
+  private _multiplicator: number = 1.9;
   private _building = 'arc';
   private _level: number = 30;
   private costsSource = new BehaviorSubject({});
+
   public costs = this.costsSource.asObservable();
 
 
@@ -76,6 +77,11 @@ export class CostsService {
 
   public setBuilding(building): void {
     this._building = building;
+    this.calculateCosts();
+  }
+
+  public setFactor(factor: number) {
+    this._multiplicator = factor;
     this.calculateCosts();
   }
 
