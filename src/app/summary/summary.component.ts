@@ -50,6 +50,7 @@ export class SummaryComponent implements OnInit {
     let input = document.getElementById('summarycopymanual') as HTMLInputElement;
     input.focus();
     input.select();
+    input.setSelectionRange(0, 9999);
     document.execCommand('copy');
   }
 }
