@@ -47,9 +47,9 @@ export class SummaryComponent implements OnInit {
   }
 
   public copy2Clipboard() {
-    let input = document.getElementById('summarycopymanual');
+    let input = document.getElementById('summarycopymanual') as HTMLInputElement;
     input.focus();
-    //input.select();
+    input.select();
     document.execCommand('copy');
   }
 }
