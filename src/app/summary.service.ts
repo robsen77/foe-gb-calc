@@ -24,7 +24,7 @@ export class SummaryService {
   }
 
   private createSummary() {
-    let openSlots = this.slotService.getOpenSlots();
+    let openSlots = this.slotService.getOpenSlots().reverse();
     let openSlotsStr = [];
     let summary: string = "";
 
