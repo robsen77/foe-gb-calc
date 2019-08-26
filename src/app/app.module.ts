@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 import { LOCALE_ID } from '@angular/core';
 import localeDe from '@angular/common/locales/de';
@@ -31,6 +32,7 @@ import { SnipingComponent } from './sniping/sniping.component';
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'de' },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
