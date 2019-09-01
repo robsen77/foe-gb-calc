@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +12,7 @@ import localeDeExtra from '@angular/common/locales/extra/de';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeDe, localeDeExtra);
 
+import { APIInterceptor } from './shared/api-interceptor';
 import { AppComponent } from './app.component';
 import { LevelSelectorComponent } from './level-selector/level-selector.component';
 import { CostTableComponent } from './cost-table/cost-table.component';
@@ -51,6 +53,11 @@ const appRoutes: Routes = [
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'de' },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: APIInterceptor,
+      multi: true,
+    },
     CookieService
   ],
   bootstrap: [AppComponent]
