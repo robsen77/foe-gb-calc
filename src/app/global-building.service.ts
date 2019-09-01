@@ -28,6 +28,21 @@ export class GlobalBuildingService {
     return ageObservable;
   }
 
+  public getAllBuildingData(building): Observable<any> {
+    const ageObservable = new Observable(observer => {
+      this._getBuildingData().subscribe(mappingData => {
+        let age = mappingData[building].age;
+
+        this._getAgeData(age).subscribe(data => {
+          observer.next(data);
+          observer.complete();
+        });
+      });
+    });
+
+    return ageObservable;
+  }
+
   public getGlobalBuildings(): Observable<any> {
     const observable = new Observable(observer => {
       this._getBuildingData().subscribe(buildingDataObj => {

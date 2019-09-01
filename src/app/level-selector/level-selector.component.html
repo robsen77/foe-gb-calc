@@ -6,13 +6,25 @@
     </select>
   </div>
   <div class="form-group col-md-2">
-    <label for="gbselect">LG auswählen:</label>
+    <label for="gbselect">Legendäre Gebäude</label>
     <select class="custom-select custom-select-sm " [(ngModel)]="gb" id="gbselect" (change)="globalBuildingChanged()">
       <option *ngFor="let globalBuilding of globalBuildings" [value]="globalBuilding.key">{{ globalBuilding.name }}</option>
     </select>
   </div>
-  <div class="form-group col-md-2">
-    <label>Level</label>
-    <input [(ngModel)]="level" placeholder="1" type="number" (change)="levelChanged()" />
-  </div>
+  <ng-template [ngIf]="mode=='gb-calc'">
+    <div class="form-group col-md-2">
+      <label>Level</label>
+      <input [(ngModel)]="level" placeholder="1" type="number" (change)="levelChanged()" />
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="mode=='own-share'">
+    <div class="form-group col-md-2">
+      <label>Level von</label>
+      <input [(ngModel)]="levelFrom" placeholder="1" type="number" (change)="levelFromToChanged()" style="width: 140px" />
+    </div>
+    <div class="form-group col-md-2">
+      <label>Level bis</label>
+      <input [(ngModel)]="levelTo" placeholder="1" type="number" (change)="levelFromToChanged()" style="width: 140px" />
+    </div>
+  </ng-template>
 </div>

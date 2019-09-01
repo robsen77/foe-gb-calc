@@ -1,31 +1,18 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>
-        {{ title }}
-      </h1>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ lgCalcTitle }}</a>
+        <a class="nav-item nav-link" href="#" routerLink="own-share" routerLinkActive="active">{{ ownShareTitle }}</a>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="row">
-    <div class="col">
-      <app-level-selector></app-level-selector>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-sniping></app-sniping>
-    </div>
-  </div>
   <div class="clearfix">&nbsp;</div>
-  <div class="row">
-    <div class="col">
-      <app-cost-table></app-cost-table>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-summary></app-summary>
-    </div>
-  </div>
+
+  <router-outlet></router-outlet>
 </div>

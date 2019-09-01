@@ -1,0 +1,23 @@
+<div class="text-center">
+  <strong>Gesamtkosten: {{ ownShareCosts.buildingCostTotal | number }}</strong> / <strong>eigene Kosten: {{ ownShareCosts.ownShareTotal | number }}</strong>
+</div>
+
+<div class="table">
+
+  <table class="table table-sm table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" class="text-right">Level</th>
+        <th scope="col" class="text-right">Gesamtkosten</th>
+        <th scope="col" class="text-right">Eigenanteil</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of ownShareCosts.levelData">
+        <th scope="row" class="text-right">{{ data.level | number }}</th>
+        <td class="text-right">{{ data.buildingCost | number}}</td>
+        <td class="text-right">{{ data.ownShare | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

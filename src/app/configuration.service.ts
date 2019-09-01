@@ -5,11 +5,16 @@ import { Injectable } from '@angular/core';
 })
 
 export class ConfigurationService {
-  private _cookieName: string = 'foe-gb-calc';
+  private selectionCookieName: string = 'foe-gb-calc-selection';
+  private userDataCookieName: string = 'foe-gb-calc-userdata';
 
   constructor() { }
 
-  public getCookieName() {
-    return this._cookieName;
+  public getSelectionCookieName() {
+    return this.selectionCookieName;
+  }
+
+  public getUserDataCookieName() {
+    return this.userDataCookieName;
   }
 }
