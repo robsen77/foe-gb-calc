@@ -10,12 +10,16 @@ import { CostsService } from '../costs.service';
 export class OwnShareTableComponent implements OnInit {
 
   public ownShareCosts;
+  public rightColumnPlusIndex = 0;
 
   constructor(private costsService: CostsService) { }
 
   ngOnInit() {
     this.costsService.ownShareCosts.subscribe(ownShareCosts => {
       this.ownShareCosts = ownShareCosts;
+      if (this.ownShareCosts.levelData) {
+        this.rightColumnPlusIndex = Math.ceil(this.ownShareCosts.levelData.length / 2);
+      }
     });
   }
 

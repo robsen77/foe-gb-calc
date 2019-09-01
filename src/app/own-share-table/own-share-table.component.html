@@ -6,18 +6,29 @@
 
   <table class="table table-sm table-hover">
     <thead class="thead-dark">
-      <tr>
-        <th scope="col" class="text-right">Level</th>
-        <th scope="col" class="text-right">Gesamtkosten</th>
-        <th scope="col" class="text-right">Eigenanteil</th>
+      <tr class="d-flex">
+        <th scope="col" class="text-right col-1">Level</th>
+        <th scope="col" class="text-right col-2">Gesamtkosten</th>
+        <th scope="col" class="text-right col-2">Eigenanteil</th>
+        <th scope="col" class="text-right col-2">&nbsp;</th>
+        <th scope="col" class="text-right col-1">Level</th>
+        <th scope="col" class="text-right col-2">Gesamtkosten</th>
+        <th scope="col" class="text-right col-2">Eigenanteil</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of ownShareCosts.levelData">
-        <th scope="row" class="text-right">{{ data.level | number }}</th>
-        <td class="text-right">{{ data.buildingCost | number}}</td>
-        <td class="text-right">{{ data.ownShare | number }}</td>
-      </tr>
+      <ng-template ngFor let-data [ngForOf]="ownShareCosts.levelData" let-i="index">
+        <tr *ngIf="i / ownShareCosts.levelData.length < 0.5"  class="d-flex">
+          <th scope="row" class="text-right col-1">{{ data.level | number }}</th>
+          <td class="text-right col-2">{{ data.buildingCost | number}}</td>
+          <td class="text-right col-2">{{ data.ownShare | number }}</td>
+          <td class="text-right col-2"></td>
+          <th scope="row" class="text-right col-1"><ng-template [ngIf]="ownShareCosts.levelData[rightColumnPlusIndex + i]">{{ (ownShareCosts.levelData.length/2 | number:'1.0-0')*1 + data.level  }}</ng-template></th>
+          <td class="text-right col-2"><ng-template [ngIf]="ownShareCosts.levelData[rightColumnPlusIndex + i]">{{ ownShareCosts.levelData[rightColumnPlusIndex + i].buildingCost | number }}</ng-template></td>
+          <td class="text-right col-2"><ng-template [ngIf]="ownShareCosts.levelData[rightColumnPlusIndex + i]">{{ ownShareCosts.levelData[rightColumnPlusIndex + i].ownShare | number }}</ng-template></td>
+        </tr>
+      </ng-template>
     </tbody>
   </table>
 </div>
+
