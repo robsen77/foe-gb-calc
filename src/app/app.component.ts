@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+
+@NgModule({
+  providers: [{ provide: APP_BASE_HREF, useValue: '/foe-gb-calc' }]
+})
 
 @Component({
   selector: 'app-root',
