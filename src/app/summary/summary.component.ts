@@ -79,6 +79,6 @@ export class SummaryComponent implements OnInit {
       suffix: this.suffix
     };
 
-    this.cookieService.set(this.config.getUserDataCookieName(), JSON.stringify(cookie));
+    this.cookieService.set(this.config.getUserDataCookieName(), JSON.stringify(cookie), this.config.getCooieExpireDays());
   }
 }

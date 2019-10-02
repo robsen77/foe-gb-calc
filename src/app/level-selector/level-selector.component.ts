@@ -93,6 +93,6 @@ export class LevelSelectorComponent implements OnInit {
       factor: this.factor
     };
 
-    this.cookieService.set(this.config.getSelectionCookieName(), JSON.stringify(cookie));
+    this.cookieService.set(this.config.getSelectionCookieName(), JSON.stringify(cookie), this.config.getCooieExpireDays());
   }
 }

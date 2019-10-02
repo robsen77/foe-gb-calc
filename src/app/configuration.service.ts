@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class ConfigurationService {
   private selectionCookieName: string = 'foe-gb-calc-selection';
   private userDataCookieName: string = 'foe-gb-calc-userdata';
-
+  private cookieExpireDays: number = 90;
+  
   constructor() { }
 
   public getSelectionCookieName() {
@@ -16,5 +17,9 @@ export class ConfigurationService {
 
   public getUserDataCookieName() {
     return this.userDataCookieName;
+  }
+
+  public getCooieExpireDays() {
+    return this.cookieExpireDays;
   }
 }
