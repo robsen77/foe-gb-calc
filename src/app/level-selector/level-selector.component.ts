@@ -5,6 +5,7 @@ import { SummaryService } from '../summary.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ConfigurationService } from '../configuration.service';
 import { ActivatedRoute } from '@angular/router';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-level-selector',
@@ -28,7 +29,8 @@ export class LevelSelectorComponent implements OnInit {
     private summaryService: SummaryService,
     private cookieService: CookieService,
     private config: ConfigurationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private titleService: Title
   ) {
     this.initCookie();
     this.costsService.setBuilding(this.gb);
@@ -43,30 +45,36 @@ export class LevelSelectorComponent implements OnInit {
     this.globalBuildingService.getGlobalBuildings().subscribe(globalBuildings => {
       this.globalBuildings = globalBuildings;
       this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
+      this.setSetitle();
     });
 
     this.mode = this.route.snapshot.routeConfig.path == 'own-share' ? 'own-share' : 'gb-calc';
+    this.setSetitle();
   }
 
   public levelChanged() {
     this.costsService.setLevel(this.level);
     this.storeCookie();
+    this.setSetitle();
   }
 
   public levelFromToChanged() {
     this.costsService.setLevelFrom(this.levelFrom);
     this.costsService.setLevelTo(this.levelTo);
+    this.setSetitle();
   }
 
   public factorChanged() {
     this.costsService.setFactor(this.factor);
     this.storeCookie();
+    this.setSetitle();
   }
 
   public globalBuildingChanged() {
     this.costsService.setBuilding(this.gb);
     this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
     this.storeCookie();
+    this.setSetitle();
   }
 
   private _getGlobalBuildingByKey(key) {
@@ -94,5 +102,18 @@ export class LevelSelectorComponent implements OnInit {
     };
 
     this.cookieService.set(this.config.getSelectionCookieName(), JSON.stringify(cookie), this.config.getCooieExpireDays());
+  }
+
+  private setSetitle() {
+    let bulding = this._getGlobalBuildingByKey(this.gb).name;
+    let title = '';
+
+    if (this.mode == 'gb-calc') {
+      title = `(${this.factor}) L${this.level} ${bulding}`;
+    } else {
+      title = `(${this.factor}) L${this.levelFrom}-${this.levelTo} ${bulding}`;
+    }
+
+    this.titleService.setTitle(title);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,13 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
-  title = 'FOE Tools';
+  title = 'FOE LG Kalkulator';
   lgCalcTitle = 'LG Rechner';
   ownShareTitle = 'Eigenanteilsrechner';
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
+  }
 }
