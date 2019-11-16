@@ -146,5 +146,13 @@
   "himeji": {
     "name": "Burg Himeji",
     "age": "virtual"
+  },
+  "stargazer": {
+    "name": "Star Gazer",
+    "age": "mars"
+  },
+  "virgio": {
+    "name": "Das Virgio-Projekt",
+    "age": "mars"
   }
 }
