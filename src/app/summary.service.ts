@@ -38,7 +38,7 @@ export class SummaryService {
         summary += this._getInterpolated(this._prefix) + " ";
       }
 
-      summary += openSlotsStr.join(", ");
+      summary += openSlotsStr.join(" ");
 
       if (this._suffix != "") {
         summary += " " + this._getInterpolated(this._suffix);
