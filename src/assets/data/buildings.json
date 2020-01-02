@@ -1,158 +1,197 @@
 {
   "obs": {
     "name": "Observatorium",
+    "shortname":  "Obsi",
     "age": "none"
   },
   "ora": {
     "name": "Orakel von Delphi",
+    "shortname": "Orakel",
     "age": "none-special"
   },
   "relikt": {
     "name": "Relikttempel",
+    "shortname": "Relikt",
     "age": "none"
   },
   "babel": {
     "name": "Tum zu Babel",
+    "shortname": "Babel",
     "age": "bronce"
   },
   "zeus": {
     "name": "Zeusstatue",
+    "shortname": "Zeus",
     "age": "bronce"
   },
   "lighthouse": {
     "name": "Leuchtturm von Alexandria",
+    "shortname": "LT",
     "age": "iron"
   },
   "colosseum": {
     "name": "Kolosseum",
+    "shortname": "Kolosseum",
     "age": "iron"
   },
   "hagia": {
     "name": "Hagia Sophia",
+    "shortname": "Hagia",
     "age": "ema"
   },
   "aachen": {
     "name": "Aachener Dom",
+    "shortname": "Aachen",
     "age": "ema"
   },
   "notre": {
     "name": "Notre Dame",
+    "shortname": "ND",
     "age": "hma"
   },
   "markus": {
     "name": "Markusdom",
+    "shortname": "Markus",
     "age": "hma"
   },
   "basilius": {
     "name": "Basilius-Kathedrale",
+    "shortname": "BK",
     "age": "lma"
   },
   "cdm": {
     "name": "Castel del Monte",
+    "shortname": "CDM",
     "age": "lma"
   },
   "dresden": {
     "name": "Dresdner Frauenkirche",
+    "shortname": "Frauenkirche",
     "age": "colo"
   },
   "deal": {
     "name": "Deal Castle",
+    "shortname": "DC",
     "age": "colo"
   },
   "royal": {
     "name": "Royal Albert Hall",
+    "shortname": "RAH",
     "age": "industry"
   },
   "capitol": {
     "name": "Capitol",
+    "shortname": "Capitol",
     "age": "industry"
   },
   "chateau": {
     "name": "Chateau Frontenac",
+    "shortname": "CF",
     "age": "centuryturn"
   },
   "alca": {
     "name": "Alcatraz",
+    "shortname": "Alca",
     "age": "centuryturn"
   },
   "space": {
     "name": "Space Needle",
+    "shortname": "SpaceN",
     "age": "modern"
   },
   "atomium": {
     "name": "Atomium",
+    "shortname": "Atomium",
     "age": "modern"
   },
   "cape": {
     "name": "Cape Canaveral",
+    "shortname": "CC",
     "age": "postmodern"
   },
   "habitat": {
     "name": "Habitat",
+    "shortname": "Habitat",
     "age": "postmodern"
   },
   "lotus": {
     "name": "Lotustempel",
+    "shortname": "Lotus",
     "age": "present"
   },
   "inno": {
     "name": "Innovation Tower",
+    "shortname": "Inno",
     "age": "present"
   },
   "dyna": {
     "name": "Dynamischer Turm",
+    "shortname": "DynaTurm",
     "age": "tomorrow"
   },
   "voyager": {
     "name": "Voyager V1",
+    "shortname": "Voyager",
     "age": "tomorrow"
   },
   "rainforrest": {
     "name": "Regenwald Projekt",
+    "shortname": "Regenwald",
     "age": "future"
   },
   "arc": {
     "name": "Arche",
+    "shortname": "Arche",
     "age": "future"
   },
   "orangery": {
     "name": "Arktische Orangerie",
+    "shortname": "AO",
     "age": "artic"
   },
   "gaea": {
     "name": "Gaea Statue",
+    "shortname": "Gea",
     "age": "artic"
   },
   "safe": {
     "name": "Saatgut Tresor",
+    "shortname": "Saatgut",
     "age": "artic"
   },
   "atlantis": {
     "name": "Atlantis Museum",
+    "shortname": "Atlantis",
     "age": "ocean"
   },
   "octopi": {
     "name": "Kraken",
+    "shortname": "Kraken",
     "age": "ocean"
   },
   "galaxy": {
     "name": "Blaue Galaxie",
+    "shortname": "BG",
     "age": "ocean"
   },
   "terracotta": {
     "name": "Terrakotta Armee",
+    "shortname": "TA",
     "age": "virtual"
   },
   "himeji": {
     "name": "Burg Himeji",
+    "shortname": "BH",
     "age": "virtual"
   },
   "stargazer": {
     "name": "Star Gazer",
+    "shortname": "Gazer",
     "age": "mars"
   },
   "virgio": {
     "name": "Das Virgio-Projekt",
+    "shortname": "Virgio",
     "age": "mars"
   }
 }

@@ -20,6 +20,10 @@ export class CostTableComponent implements OnInit {
     this.costsService.costs.subscribe(costs => {
       this.costs = costs;
     });
+
+    this.slotService.slotBehaviorObservable.subscribe(slots => {
+      this.openSlots = slots;
+    });
   }
 
   public changeSlot() {

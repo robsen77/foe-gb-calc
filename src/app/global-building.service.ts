@@ -84,6 +84,7 @@ export class GlobalBuildingService {
     for (let key in dataObj) {
       result.push({
         name: dataObj[key].name,
+        shortname: dataObj[key].shortname,
         key: key
       });
     }

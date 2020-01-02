@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CostsService } from '../costs.service';
 import { GlobalBuildingService } from '../global-building.service';
 import { SummaryService } from '../summary.service';
+import { SlotService } from '../slot.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ConfigurationService } from '../configuration.service';
 import { ActivatedRoute } from '@angular/router';
@@ -17,7 +18,7 @@ export class LevelSelectorComponent implements OnInit {
   public level = 30;
   public levelFrom = 1;
   public levelTo = 80;
-  public globalBuildings;
+  public globalBuildings = [];
   public gb = 'arc';
   public factors = [1.85, 1.9];
   public factor = 1.9;
@@ -28,6 +29,7 @@ export class LevelSelectorComponent implements OnInit {
     private globalBuildingService: GlobalBuildingService,
     private summaryService: SummaryService,
     private cookieService: CookieService,
+    private slotService: SlotService,
     private config: ConfigurationService,
     private route: ActivatedRoute,
     private titleService: Title
@@ -44,12 +46,11 @@ export class LevelSelectorComponent implements OnInit {
     this.costsService.calculateCosts();
     this.globalBuildingService.getGlobalBuildings().subscribe(globalBuildings => {
       this.globalBuildings = globalBuildings;
-      this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
+      this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb));
       this.setSetitle();
     });
 
     this.mode = this.route.snapshot.routeConfig.path == 'own-share' ? 'own-share' : 'gb-calc';
-    this.setSetitle();
   }
 
   public levelChanged() {
@@ -72,9 +73,10 @@ export class LevelSelectorComponent implements OnInit {
 
   public globalBuildingChanged() {
     this.costsService.setBuilding(this.gb);
-    this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb).name);
+    this.summaryService.setBuilding(this._getGlobalBuildingByKey(this.gb));
     this.storeCookie();
     this.setSetitle();
+    this.slotService.resetSlots();
   }
 
   private _getGlobalBuildingByKey(key) {

@@ -5,13 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SlotService {
-  private _openSlots = [false, false, false, false, false];
+  private _openSlots = {1: false, 2: false, 3: false, 4: false, 5: false };
   private _slotBehavior = new BehaviorSubject({});
   public slotBehaviorObservable = this._slotBehavior.asObservable();
 
   constructor() { }
 
-  public getSlots(): Array<boolean> {
+  public getSlots(): Object {
     return this._openSlots;
   }
 
@@ -20,12 +20,8 @@ export class SlotService {
     this._slotBehavior.next(slots);
   }
 
-  public getOpenSlots(): Array<number> {
-    return this._openSlots.reduce(function (acc, curr, index) {
-      if (curr == true) {
-        acc.push(index + 1);
-      }
-      return acc;
-    }, []);
+  public resetSlots(): void {
+    this._openSlots = { 1: false, 2: false, 3: false, 4: false, 5: false };
+    this._slotBehavior.next(this._openSlots);
   }
 }
